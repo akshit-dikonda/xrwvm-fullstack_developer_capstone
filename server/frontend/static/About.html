@@ -1,22 +1,116 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Dealerships</title>
+
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+
+  <style>
+    .about-banner {
+      background-image: url('/static/car_dealership.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .about-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 8px;
+    }
+
+    .about-banner-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .team-card {
+      width: 30%;
+      min-width: 260px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      background: white;
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .team-card .card-body {
+      padding: 20px;
+    }
+
+    .team-card .title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .team-card .role {
+      color: #007b83;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .team-card {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise;">
     <div class="container-fluid">
       <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+            <a class="nav-link" style="font-size: larger;" href="/">Home</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
           </li>
@@ -24,45 +118,67 @@
       </div>
     </div>
   </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
+
+  <div class="card" style="width: 90%; margin: auto; margin-top: 4%; margin-bottom: 5%;">
+
+    <div class="about-banner">
+      <div class="about-banner-content">
+        <h1>About Us</h1>
+        <p>Meet the team behind our trusted car dealership platform.</p>
       </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+    </div>
+
+    <div style="padding: 0 5% 20px;">
+      <h2 class="text-center">Our Team</h2>
+      <p class="text-center">
+        Our dealership team is committed to helping customers find quality vehicles
+        and providing a simple, reliable car-buying experience.
+      </p>
+    </div>
+
+    <div class="team-container">
+
+      <div class="team-card">
+        <img src="/static/cars.jpeg" alt="Automotive dealership vehicles">
         <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+          <p class="title">Akshay Sharma</p>
+          <p class="role">General Manager</p>
+          <p class="card-text">
+            Akshay leads our dealership operations and ensures every customer
+            receives professional and reliable service.
+          </p>
+          <p>akshay.sharma@dealerships.com</p>
         </div>
       </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+      <div class="team-card">
+        <img src="/static/car_dealership.jpg" alt="Car dealership showroom">
         <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
+          <p class="title">Priya Mehta</p>
+          <p class="role">Sales Manager</p>
+          <p class="card-text">
+            Priya helps customers choose vehicles that match their needs and budget.
+            She focuses on creating a transparent and comfortable buying experience.
+          </p>
+          <p>priya.mehta@dealerships.com</p>
         </div>
       </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+      <div class="team-card">
+        <img src="/static/cars.jpeg" alt="Cars available at the dealership">
         <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+          <p class="title">Rahul Verma</p>
+          <p class="role">Customer Relations Manager</p>
+          <p class="card-text">
+            Rahul works closely with customers after their purchase and helps resolve
+            questions quickly while maintaining strong customer relationships.
+          </p>
+          <p>rahul.verma@dealerships.com</p>
         </div>
       </div>
-    </div>
-    </div>
-    </div>
-    
-</div>
 
+    </div>
+  </div>
+
+</body>
 </html>
