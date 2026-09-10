@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Dealerships</title>
+
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+
+  <style>
+    .contact-container {
+      width: 90%;
+      margin: 4% auto 5%;
+    }
+
+    .contact-banner {
+      background-image: url('/static/contactus.png');
+      background-size: cover;
+      background-position: center;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .contact-banner-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      padding: 35px 5%;
+    }
+
+    .contact-card {
+      flex: 1;
+      min-width: 250px;
+      padding: 25px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+      background: white;
+    }
+
+    .contact-card h3 {
+      color: #007b83;
+      margin-bottom: 15px;
+    }
+
+    .contact-card p {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+
+    .contact-intro {
+      text-align: center;
+      padding: 25px 5% 5px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        width: 95%;
+      }
+
+      .contact-banner h1 {
+        font-size: 2.2rem;
+      }
+
+      .contact-card {
+        min-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="card contact-container">
+
+    <div class="contact-banner">
+      <div class="contact-banner-content">
+        <h1>Contact Us</h1>
+        <p>We are here to help with your dealership and vehicle needs.</p>
+      </div>
+    </div>
+
+    <div class="contact-intro">
+      <h2>Get in Touch</h2>
+      <p>
+        Have questions about our dealerships, vehicles, or services?
+        Contact our team and we will be happy to assist you.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h3>Head Office</h3>
+        <p>Dealerships Customer Service</p>
+        <p>123 Automotive Avenue</p>
+        <p>Kansas City, Kansas 66101</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Phone & Email</h3>
+        <p><strong>Phone:</strong> +1 (555) 246-8100</p>
+        <p><strong>Email:</strong> support@dealerships.com</p>
+        <p><strong>Sales:</strong> sales@dealerships.com</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Business Hours</h3>
+        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+        <p>Saturday: 10:00 AM - 4:00 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
